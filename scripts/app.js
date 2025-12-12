@@ -45,7 +45,7 @@ const userInput = document.getElementById("userInput");
 const studentFirstName = document.getElementById("studentFirstName");
 const studentLastName = document.getElementById("studentLastName");
 const studentEmail = document.getElementById("studentEmail");
-const studentFavoriteFood = document.getElementById("studentFavoriteFood");
+const studentPersonalEmail = document.getElementById("studentPersonalEmail");
 //=======================End of HTML Elements==========================\\
 
 //=====================Event Listeners====================\\
@@ -197,7 +197,6 @@ const showMonthlyPreviousStats = async () => {
 const randomizedStarWarsCharacterIndex = async () => {
     let charactersListLength = await fetchStarWarsJSONData();
     const randomizedIndex = Math.floor(Math.random() * charactersListLength.characters.length)
-    console.log(randomizedIndex);
     return randomizedIndex;
 };
 randomizedStarWarsCharacterIndex();
@@ -205,7 +204,6 @@ randomizedStarWarsCharacterIndex();
 const randomizedStarWarsPlanetIndex = async () => {
     let planetListLength = await fetchStarWarsJSONData();
     const randomizedPlanetIndex = Math.floor(Math.random() * planetListLength.planets.length)
-    console.log(randomizedPlanetIndex);
     return randomizedPlanetIndex;
 };
 randomizedStarWarsPlanetIndex();
@@ -213,7 +211,6 @@ randomizedStarWarsPlanetIndex();
 const randomizedStarWarsStarshipIndex = async () => {
     let starshipListLength = await fetchStarWarsJSONData();
     const randomizedStarshipIndex = Math.floor(Math.random() * starshipListLength.starships.length)
-    console.log(randomizedStarshipIndex);
     return randomizedStarshipIndex;
 };
 randomizedStarWarsStarshipIndex();
@@ -248,8 +245,7 @@ const displayRandomStarship = async () => {
 //======================= Start of JavaScript Search Functions =====================\\
 const randomStudentListIndex = async () => {
     let studentListData = await fetchStudentData();
-    const randomIndexNum = Math.floor(Math.random() * studentListData.length)
-    console.log(randomIndexNum);
+    const randomIndexNum = Math.floor(Math.random() * studentListData.season8.length)
     return randomIndexNum;
 };
 randomStudentListIndex();
@@ -257,7 +253,8 @@ const displyRandomStudent = async () => {
     let studentListJSONData = await fetchStudentData();
     const randomStudentIndex = await randomStudentListIndex();
     studentFirstName.textContent = `First Name: ${studentListJSONData.season8[randomStudentIndex].firstName}`
-    // studentLastName.textContent = 
-    // studentEmail.textContent =
+    studentLastName.textContent = `Last Name: ${studentListJSONData.season8[randomStudentIndex].lastName}`
+    studentEmail.textContent = `Email: ${studentListJSONData.season8[randomStudentIndex].codestackEmail}`
+    studentPersonalEmail.textContent = `Personal Email: ${studentListJSONData.season8[randomStudentIndex].personalEmail}`
 };
 //======================= End of JavaScript Search Functions ========================\\
