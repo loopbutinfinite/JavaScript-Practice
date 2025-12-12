@@ -1,0 +1,73 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Luke Skywalker",
+      "role": "Jedi Knight",
+      "homeworld": "Tatooine",
+      "lightsaber": "Green"
+    },
+    {
+      "id": 2,
+      "name": "Darth Vader",
+      "role": "Sith Lord",
+      "homeworld": "Tatooine",
+      "lightsaber": "Red"
+    },
+    {
+      "id": 3,
+      "name": "Leia Organa",
+      "role": "Princess / Rebel Leader",
+      "homeworld": "Alderaan",
+      "lightsaber": null
+    },
+    {
+      "id": 4,
+      "name": "Han Solo",
+      "role": "Smuggler",
+      "homeworld": "Corellia",
+      "lightsaber": null
+    },
+    {
+      "id": 5,
+      "name": "Yoda",
+      "role": "Jedi Grand Master",
+      "homeworld": "Unknown",
+      "lightsaber": "Green"
+    }
+  ],
+  "planets": [
+    {
+      "name": "Tatooine",
+      "climate": "Arid",
+      "population": "200000"
+    },
+    {
+      "name": "Hoth",
+      "climate": "Frozen",
+      "population": "Unknown"
+    },
+    {
+      "name": "Coruscant",
+      "climate": "Temperate",
+      "population": "1000000000000"
+    }
+  ],
+  "starships": [
+    {
+      "name": "Millennium Falcon",
+      "model": "YT-1300f light freighter",
+      "crew": 4
+    },
+    {
+      "name": "X-Wing",
+      "model": "T-65B",
+      "crew": 1
+    },
+    {
+      "name": "TIE Fighter",
+      "model": "Twin Ion Engine/Ln",
+      "crew": 1
+    }
+  ]
+}

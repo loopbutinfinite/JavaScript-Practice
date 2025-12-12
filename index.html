@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <h1 id="titleText" class="d-flex justify-content-center mt-5"><u>DOM Manipulation</u></h1>
+    <div class="d-flex justify-content-center">
+        <button id="changeTitleTextButton">Change Title Text</button>
+        <button id="changeBackgroundColorButton">Change Background Color</button>
+        <button id="changeTitleFontButton">Change Title Font</button>
+        <button id="loadAGreetingButton">Load a greeting</button>
+        <button id="addAnImageButton">Add an Image</button>
+        <button id="addCSSClassToIMG">Add CSS Styling Class to Image</button>
+    </div>
+    <div id="greetingDiv" class="d-flex justify-content-center my-5">
+
+    </div>
+    <div class="d-flex justify-content-center" id="imageDiv">
+
+    </div>
+    <h1 class="d-flex justify-content-center mb-4"><u>Practicing with JSON Data Section</u></h1>
+    <h2 class="d-flex justify-content-center">Time Tracker JSON data</h2>
+    <div class="d-flex justify-content-center my-3">
+        <button id="dailyStatsButton">Daily Stats</button>
+        <button id="weeklyStatsButton">Weekly Stats</button>
+        <button id="monthlyStatsButton">Monthly Stats</button>
+    </div>
+    <div class="container-fluid">
+        <div class="row g-4">
+            <article class="col-lg-4 col-md-6">
+                <div class="activityImgCard mt-4 mt-lg-0">
+                    <div class="activityCard p-4">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h2 class="activityCardTitle fontColorWhite">Work</h2>
+                            <p class="moreOptionsButton">...</p>
+                        </div>
+                        <div>
+                            <p class="activityCardTime fontColorWhite mb-0" id="workCurrentTime">00hrs</p>
+                            <p class="activityCardPreviousTime" id="workPreviousTime">Last Week - 00hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-6">
+                <div class="activityImgCard playTabletFormatting">
+                    <div class="activityCard p-4">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h2 class="activityCardTitle fontColorWhite">Play</h2>
+                            <p class="moreOptionsButton">...</p>
+                        </div>
+                        <div>
+                            <p class="activityCardTime fontColorWhite mb-0" id="playCurrentTime">00hrs</p>
+                            <p class="activityCardPreviousTime" id="playPreviousTime">Last Week - 00hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-6">
+                <div class="activityImgCard studyTabletFormatting">
+                    <div class="activityCard p-4">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h2 class="activityCardTitle fontColorWhite">Study</h2>
+                            <p class="moreOptionsButton">...</p>
+                        </div>
+                        <div>
+                            <p class="activityCardTime fontColorWhite mb-0" id="studyCurrentTime">00hrs</p>
+                            <p class="activityCardPreviousTime" id="studyPreviousTime">Last Week - 00hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-6">
+                <div class="activityImgCard mt-2">
+                    <div class="activityCard p-4">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h2 class="activityCardTitle fontColorWhite">Exercise</h2>
+                            <p class="moreOptionsButton">...</p>
+                        </div>
+                        <div>
+                            <p class="activityCardTime fontColorWhite mb-0" id="exerciseCurrentTime">00hrs</p>
+                            <p class="activityCardPreviousTime" id="exercisePreviousTime">Last Week - 00hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-6">
+                <div class="activityImgCard mt-2">
+                    <div class="activityCard p-4">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h2 class="activityCardTitle fontColorWhite">Social</h2>
+                            <p class="moreOptionsButton">...</p>
+                        </div>
+                        <div>
+                            <p class="activityCardTime fontColorWhite mb-0" id="socialCurrentTime">00hrs</p>
+                            <p class="activityCardPreviousTime" id="socialPreviousTime">Last Week - 00hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-4 col-md-6">
+                <div class="activityImgCard mt-2">
+                    <div class="activityCard p-4 mb-5 mb-lg-0">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h2 class="activityCardTitle fontColorWhite">Self Care</h2>
+                            <p class="moreOptionsButton">...</p>
+                        </div>
+                        <div>
+                            <p class="activityCardTime fontColorWhite mb-0" id="selfcareCurrentTime">00hrs</p>
+                            <p class="activityCardPreviousTime" id="selfcarePreviousTime">Last Week - 00hrs</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="row">
+            <h2 class="d-flex justify-content-center mt-5">Star Wars' Character JSON Data</h2>
+            <div class="d-flex justify-content-center">
+                <button id="displayRandomStarWarsCharacterButton">Display a random Star Wars Character</button>
+                <button id="displayRandomStarWarsPlanetButton">Display a random Star Wars Planet</button>
+                <button id="displayRandomStarWarsStarshipButton">Display a random Star Wars Starship</button>
+            </div>
+            <div class="col d-flex justify-content-center mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <h5 id="starWarsCharacterName" class="card-title">Star Wars Character Name</h5>
+                        <p id="starWarsCharacterRole" class="card-text my-2">Role:</p>
+                        <p id="starWarsCharacterHomeWorld" class="card-text">HomeWorld:</p>
+                        <p id="starWarsCharacterLightSaber" class="card-text">LightSaber:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <h5 id="starWarsPlanetName" class="card-title">Star Wars Planet Name</h5>
+                        <p id="starWarsPlanetClimate" class="card-text my-3">Planet Climate:</p>
+                        <p id="starWarsPlanetPopulation" class="card-text">Planet Population:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <h5 id="starWarsStarshipName" class="card-title">Star Wars Starship Name</h5>
+                        <p id="starWarsStarshipModel" class="card-text my-3">Starship Model:</p>
+                        <p id="starWarsStarshipCrew" class="card-text">Starship Crew Count:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="d-flex justify-content-center mt-5">JavaScript Search Functionality with Student JSON Data</h2>
+            <div class="col">
+                <p>Start typing to search:</p>
+                <input type="text" id="userInput" class="form-control" placeholder="Enter First Name">
+                <button type="button" id="submitButton" class=" btn btn-primary mt-1">Submit</button>
+                <button type="button" id="randomStudentButton" class=" btn btn-primary mt-1">Random Student</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex flex-column align-items-center">
+                <div class="card" style="width: 50%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Results</h5>
+                        <p id="studentFirstName" class="card-text my-3">First Name:</p>
+                        <p id="studentLastName" class="card-text my-3">Last Name:</p>
+                        <p id="studentEmail" class="card-text my-3">Email:</p>
+                        <p id="studentFavoriteFood" class="card-text">Favorite Food:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
